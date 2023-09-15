@@ -16,10 +16,9 @@ module.exports = {
     },
   },
   env: { node: true },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "unicorn"],
   extends: [
     "eslint:recommended",
-    "plugin:unicorn/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:import/recommended",
@@ -40,8 +39,7 @@ module.exports = {
     {
       files: ["*.ts", "*.tsx", "*.mts", "*.cts", "*.vue"],
       rules: {
-        // The core `no-unused-vars` rules (in the `eslint:recommended` ruleset)
-        // does not work with type definitions.
+        // The core `no-unused-vars` rules won't work with type definitions.
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "warn",
 
@@ -52,20 +50,6 @@ module.exports = {
         "import/no-unresolved": "off",
         "import/no-self-import": "error",
         "import/named": "off",
-        "sort-imports": [
-          "error",
-          {
-            ignoreCase: false,
-            ignoreDeclarationSort: true,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-            allowSeparatedGroups: false,
-          },
-        ],
-        "@typescript-eslint/consistent-type-imports": [
-          "error",
-          { prefer: "type-imports", disallowTypeAnnotations: false },
-        ],
 
         // ES6
         "no-var": "error",
@@ -83,10 +67,31 @@ module.exports = {
         "prefer-template": "error",
 
         // Unicorns
-        "unicorn/error-message": "error",
         "unicorn/prefer-node-protocol": "error",
         "unicorn/prefer-number-properties": "error",
         "unicorn/no-new-array": "error",
+
+        // Others
+        "sort-imports": [
+          "error",
+          {
+            ignoreCase: false,
+            ignoreDeclarationSort: true,
+            ignoreMemberSort: false,
+            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+            allowSeparatedGroups: false,
+          },
+        ],
+
+        // TypeScript
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          { prefer: "type-imports", disallowTypeAnnotations: false },
+        ],
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
       },
     },
     {
