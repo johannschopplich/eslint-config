@@ -16,7 +16,7 @@ module.exports = {
     },
   },
   env: { node: true },
-  plugins: ['@typescript-eslint'],
+  plugins: ["@typescript-eslint"],
   extends: [
     "eslint:recommended",
     "plugin:unicorn/recommended",
@@ -50,13 +50,22 @@ module.exports = {
         "import/first": "error",
         "import/no-mutable-exports": "error",
         "import/no-unresolved": "off",
-        "import/no-absolute-path": "off",
-        "import/newline-after-import": [
-          "error",
-          { count: 1, considerComments: true },
-        ],
         "import/no-self-import": "error",
         "import/named": "off",
+        "sort-imports": [
+          "error",
+          {
+            ignoreCase: false,
+            ignoreDeclarationSort: true,
+            ignoreMemberSort: false,
+            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+            allowSeparatedGroups: false,
+          },
+        ],
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          { prefer: "type-imports", disallowTypeAnnotations: false },
+        ],
 
         // ES6
         "no-var": "error",
@@ -78,18 +87,6 @@ module.exports = {
         "unicorn/prefer-node-protocol": "error",
         "unicorn/prefer-number-properties": "error",
         "unicorn/no-new-array": "error",
-
-        // Others
-        "sort-imports": [
-          "error",
-          {
-            ignoreCase: false,
-            ignoreDeclarationSort: true,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-            allowSeparatedGroups: false,
-          },
-        ],
       },
     },
     {

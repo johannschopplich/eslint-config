@@ -15,8 +15,8 @@
   ],
   "scripts": {
     "lint": "eslint . --config=index.js",
-    "format": "prettier \"**/*.{js,json,md,mjs,ts,vue,yml}\" --write",
-    "format:check": "prettier \"**/*.{js,json,md,mjs,ts,vue,yml}\" --check",
+    "format": "prettier \"**/*.{js,json,md,mjs,ts,yml}\" --write",
+    "format:check": "prettier \"**/*.{js,json,md,mjs,ts,yml}\" --check",
     "release": "bumpp",
     "test": "pnpm run lint"
   },
