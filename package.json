@@ -1,6 +1,6 @@
 {
   "name": "@byjohann/eslint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packageManager": "pnpm@8.7.5",
   "description": "ESLint config for my projects",
   "author": "Johann Schopplich <pkg@johannschopplich.com>",
