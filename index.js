@@ -80,8 +80,6 @@ module.exports = {
         "unicorn/prefer-node-protocol": "error",
         "unicorn/prefer-number-properties": "error",
 
-        // Others
-
         // TypeScript
         "@typescript-eslint/consistent-type-imports": [
           "error",
