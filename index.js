@@ -26,11 +26,10 @@ module.exports = {
   ],
   ignorePatterns: ["*.d.ts", "dist"],
   settings: {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
     "import/resolver": {
-      node: { extensions: [".js", ".mjs", ".cjs"] },
+      node: {
+        extensions: [".js", ".cjs", ".mjs", ".ts", ".cts", ".mts", ".tsx"],
+      },
     },
   },
   overrides: [
@@ -72,7 +71,6 @@ module.exports = {
         "import/no-mutable-exports": "error",
         "import/no-unresolved": "off",
         "import/no-self-import": "error",
-        "import/named": "off",
 
         // Unicorns
         "unicorn/no-for-loop": "error",
