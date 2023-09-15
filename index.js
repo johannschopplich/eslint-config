@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/prefer-module */
-
 /** @type {import('eslint').ESLint.ConfigData}  */
 module.exports = {
   parserOptions: {
@@ -43,16 +41,9 @@ module.exports = {
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "warn",
 
-        // Imports
-        "import/order": "error",
-        "import/first": "error",
-        "import/no-mutable-exports": "error",
-        "import/no-unresolved": "off",
-        "import/no-self-import": "error",
-        "import/named": "off",
-
-        // ES6
+        // ESLint core
         "no-var": "error",
+        "object-shorthand": "error",
         "prefer-const": [
           "error",
           {
@@ -60,18 +51,10 @@ module.exports = {
             ignoreReadBeforeAssign: true,
           },
         ],
-        "object-shorthand": "error",
         "prefer-exponentiation-operator": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
-
-        // Unicorns
-        "unicorn/prefer-node-protocol": "error",
-        "unicorn/prefer-number-properties": "error",
-        "unicorn/no-new-array": "error",
-
-        // Others
         "sort-imports": [
           "error",
           {
@@ -83,15 +66,31 @@ module.exports = {
           },
         ],
 
+        // Imports
+        "import/order": "error",
+        "import/first": "error",
+        "import/no-mutable-exports": "error",
+        "import/no-unresolved": "off",
+        "import/no-self-import": "error",
+        "import/named": "off",
+
+        // Unicorns
+        "unicorn/no-for-loop": "error",
+        "unicorn/no-new-array": "error",
+        "unicorn/prefer-node-protocol": "error",
+        "unicorn/prefer-number-properties": "error",
+
+        // Others
+
         // TypeScript
         "@typescript-eslint/consistent-type-imports": [
           "error",
           { prefer: "type-imports", disallowTypeAnnotations: false },
         ],
-        '@typescript-eslint/no-empty-interface': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'off',
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
       },
     },
     {
