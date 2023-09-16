@@ -1,10 +1,12 @@
 # ESLint Config
 
-> Sharable ESLint config for my repositories.
+> Sharable ESLint config for my repositories with a focus on code reproducibility and readability.
 
-I was switching between different ESLint configs for my projects. Most of the time [Anthony Fu](https://github.com/antfu)'s set of rules was the best fit. He is [proactively advocating using ESLint for formatting](https://antfu.me/posts/why-not-prettier), which I don't agree with. I prefer to use [Prettier](https://prettier.io) for formatting and ESLint for linting. In addition, some rules where a bit too opinionated for my taste.
+I was switching between different ESLint configs for my projects. Most of the time [Anthony Fu](https://github.com/antfu)'s set of rules was the best fit. He is [proactively advocating using ESLint for formatting](https://antfu.me/posts/why-not-prettier), which I don't agree with. I prefer to use [Prettier](https://prettier.io) for formatting and ESLint for linting.
 
-Thus, the day has come to create my own ESLint config. Inspirations are drawn from:
+Thus, the day has come to create my own ESLint config. My goal is to find the middle ground between as little rules as possible and as many rules as necessary. For example, I prefer strictly ordered module and type imports.
+
+Inspirations are drawn from:
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config)
 - [@nuxt/eslint-config](https://github.com/nuxt/eslint-config)
@@ -42,7 +44,7 @@ Create a `.eslintrc` file in the root of your project with the following content
 
 ```json
 {
-  "extends": ["@byjohann/eslint-config"]
+  "extends": "@byjohann/eslint-config"
 }
 ```
 
@@ -70,6 +72,9 @@ To force your fellow developers to use the same VSCode extensions as you, add th
   ]
 }
 ```
+
+> [!NOTE]
+> If you're not using Vue, remove the `Vue.volar` extension from the list.
 
 ## License
 
