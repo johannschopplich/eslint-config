@@ -40,45 +40,6 @@ module.exports = {
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "warn",
 
-        // ESLint core
-        "no-var": "error",
-        "object-shorthand": "error",
-        "prefer-const": [
-          "error",
-          {
-            destructuring: "all",
-            ignoreReadBeforeAssign: true,
-          },
-        ],
-        "prefer-exponentiation-operator": "error",
-        "prefer-rest-params": "error",
-        "prefer-spread": "error",
-        "prefer-template": "error",
-        "sort-imports": [
-          "error",
-          {
-            ignoreCase: false,
-            ignoreDeclarationSort: true,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-            allowSeparatedGroups: false,
-          },
-        ],
-
-        // Imports
-        "import/order": "error",
-        "import/first": "error",
-        "import/no-mutable-exports": "error",
-        "import/no-unresolved": "off",
-        "import/no-self-import": "error",
-
-        // Unicorns
-        "unicorn/no-for-loop": "error",
-        "unicorn/no-new-array": "error",
-        "unicorn/prefer-node-protocol": "error",
-        "unicorn/prefer-number-properties": "error",
-
-        // TypeScript
         "@typescript-eslint/consistent-type-imports": [
           "error",
           { prefer: "type-imports", disallowTypeAnnotations: false },
@@ -146,4 +107,42 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    "no-var": "error",
+    "object-shorthand": "error",
+    "prefer-const": [
+      "error",
+      {
+        destructuring: "all",
+        ignoreReadBeforeAssign: true,
+      },
+    ],
+    "prefer-exponentiation-operator": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "sort-imports": [
+      "error",
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+        allowSeparatedGroups: false,
+      },
+    ],
+
+    // Imports
+    "import/order": "error",
+    "import/first": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-unresolved": "off",
+    "import/no-self-import": "error",
+
+    // Unicorns
+    "unicorn/no-for-loop": "error",
+    "unicorn/no-new-array": "error",
+    "unicorn/prefer-node-protocol": "error",
+    "unicorn/prefer-number-properties": "error",
+  },
 };
