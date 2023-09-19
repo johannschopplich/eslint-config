@@ -24,7 +24,7 @@ module.exports = {
     "plugin:vue/vue3-recommended",
     "prettier",
   ],
-  ignorePatterns: ["*.d.ts", "dist"],
+  ignorePatterns: ["dist"],
   settings: {
     "import/resolver": {
       node: {
@@ -48,6 +48,14 @@ module.exports = {
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
+      },
+    },
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "import/no-duplicates": "off",
+        "unused-imports/no-unused-vars": "off",
+        "eslint-comments/no-unlimited-disable": "off",
       },
     },
     {
@@ -135,6 +143,7 @@ module.exports = {
     // Imports
     "import/order": "error",
     "import/first": "error",
+    "import/no-duplicates": "error",
     "import/no-mutable-exports": "error",
     "import/no-unresolved": "off",
     "import/no-self-import": "error",
