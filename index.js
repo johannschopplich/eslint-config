@@ -84,13 +84,6 @@ module.exports = {
             order: ["script", "template", "style"],
           },
         ],
-        "vue/block-tag-newline": [
-          "error",
-          {
-            singleline: "always",
-            multiline: "always",
-          },
-        ],
         "vue/component-name-in-template-casing": ["error", "PascalCase"],
         "vue/custom-event-name-casing": ["error", "camelCase"],
         "vue/define-macros-order": [
