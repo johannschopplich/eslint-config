@@ -87,6 +87,7 @@ module.exports = {
           "PascalCase",
           {
             registeredComponentsOnly: false,
+            ignores: ["component"],
           },
         ],
         "vue/component-options-name-casing": ["error", "PascalCase"],
