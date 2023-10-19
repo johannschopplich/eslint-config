@@ -76,22 +76,20 @@ module.exports = {
         "prefer-rest-params": "error", // ts provides better types with rest args over arguments
         "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
 
-        "vue/no-v-html": "off",
-        "vue/multi-word-component-names": "off",
         "vue/block-order": [
           "error",
           {
             order: ["script", "template", "style"],
           },
         ],
-        "vue/block-tag-newline": [
+        "vue/component-name-in-template-casing": [
           "error",
+          "PascalCase",
           {
-            singleline: "always",
-            multiline: "always",
+            registeredComponentsOnly: false,
           },
         ],
-        "vue/component-name-in-template-casing": ["error", "PascalCase"],
+        "vue/component-options-name-casing": ["error", "PascalCase"],
         "vue/custom-event-name-casing": ["error", "camelCase"],
         "vue/define-macros-order": [
           "error",
@@ -104,6 +102,36 @@ module.exports = {
             ],
           },
         ],
+        "vue/dot-notation": ["error", { allowKeywords: true }],
+        "vue/eqeqeq": ["error", "smart"],
+        "vue/multi-word-component-names": "off",
+        "vue/no-dupe-keys": "off",
+        "vue/no-empty-pattern": "error",
+        "vue/no-irregular-whitespace": "error",
+        "vue/no-restricted-syntax": [
+          "error",
+          "DebuggerStatement",
+          "LabeledStatement",
+          "WithStatement",
+        ],
+        "vue/no-restricted-v-bind": ["error", "/^v-/"],
+        "vue/no-setup-props-reactivity-loss": "off",
+        "vue/no-sparse-arrays": "error",
+        "vue/no-unused-refs": "error",
+        "vue/no-useless-v-bind": "error",
+        "vue/no-v-html": "off",
+        "vue/object-shorthand": [
+          "error",
+          "always",
+          {
+            avoidQuotes: true,
+            ignoreConstructors: false,
+          },
+        ],
+        "vue/prefer-separate-static-class": "error",
+        "vue/prefer-template": "error",
+        "vue/require-default-prop": "off",
+        "vue/require-prop-types": "off",
       },
     },
   ],
