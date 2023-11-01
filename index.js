@@ -87,7 +87,6 @@ module.exports = {
           "PascalCase",
           {
             registeredComponentsOnly: false,
-            ignores: ["component"],
           },
         ],
         "vue/component-options-name-casing": ["error", "PascalCase"],
@@ -131,6 +130,7 @@ module.exports = {
         ],
         "vue/prefer-separate-static-class": "error",
         "vue/prefer-template": "error",
+        "vue/prop-name-casing": ["error", "camelCase"],
         "vue/require-default-prop": "off",
         "vue/require-prop-types": "off",
       },
@@ -170,6 +170,7 @@ module.exports = {
     "import/no-self-import": "error",
 
     // Unicorns
+    "unicorn/no-array-for-each": "error",
     "unicorn/no-for-loop": "error",
     "unicorn/no-new-array": "error",
     "unicorn/prefer-node-protocol": "error",
