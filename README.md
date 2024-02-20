@@ -1,6 +1,9 @@
 # ESLint Config
 
-> Sharable ESLint config for my repositories with a focus on code reproducibility and readability.
+> [!TIP]
+> With the release of [@antfu/eslint-config v2](https://github.com/antfu/eslint-config), this project has become obsolete. By disabling `stylistic` rules, you can achieve the same result as this ESLint config.
+
+Sharable ESLint config for my repositories with a focus on code reproducibility and readability.
 
 I was switching between different ESLint configs for my projects. Most of the time [Anthony Fu](https://github.com/antfu)'s set of rules was the best fit. He is [proactively advocating using ESLint for formatting](https://antfu.me/posts/why-not-prettier), which I don't agree with. I prefer to use [Prettier](https://prettier.io) for formatting and ESLint for linting.
 
